@@ -71,18 +71,18 @@ const Contact = () => {
           </h2>
           <p className="text-beige/70 text-center mb-12">{t('contact.subtitle')}</p>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-beige/5 backdrop-blur-sm rounded-2xl p-6 border border-beige/10">
                 <div className="flex items-center space-x-4">
                   <div className="w-[48px] h-[48px] flex-shrink-0 bg-garnet rounded-full flex items-center justify-center">
                     <Mail className="text-beige" size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-beige/70 text-sm">{t('contact.email')}</p>
                     <a
                       href="mailto:tolotrantenaina10@gmail.com"
-                      className="text-beige hover:text-garnet transition-colors"
+                      className="text-beige hover:text-garnet transition-colors break-words block"
                     >
                       tolotrantenaina10@gmail.com
                     </a>
@@ -95,13 +95,13 @@ const Contact = () => {
                   <div className="w-[48px] h-[48px] flex-shrink-0 bg-brown rounded-full flex items-center justify-center">
                     <Linkedin className="text-beige" size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-beige/70 text-sm">LinkedIn</p>
                     <a
                       href="https://linkedin.com/in/randrianantenaina-tolotra-518214204"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-beige hover:text-brown-light transition-colors"
+                      className="text-beige hover:text-brown-light transition-colors break-words block"
                     >
                       linkedin.com/in/randrianantenaina-tolotra-518214204
                     </a>
@@ -114,13 +114,13 @@ const Contact = () => {
                   <div className="w-[48px] h-[48px] flex-shrink-0 bg-midnight-light rounded-full flex items-center justify-center">
                     <Github className="text-beige" size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-beige/70 text-sm">GitHub</p>
                     <a
                       href="https://github.com/TolotraNantenaina"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-beige hover:text-beige-dark transition-colors"
+                      className="text-beige hover:text-beige-dark transition-colors break-words block"
                     >
                       github.com/TolotraNantenaina
                     </a>
