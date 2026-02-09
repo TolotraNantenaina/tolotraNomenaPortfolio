@@ -1,8 +1,9 @@
 import { ArrowDown, Download, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import profilePhoto from '../assets/profile-photo.png';
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
@@ -18,6 +19,23 @@ const Hero = () => {
     }
   };
 
+  const handleDownloadCV = () => {
+    const cvFileName = language === 'fr' 
+      ? 'cv-tolotra-nomenjanahary-fr.pdf' 
+      : 'cv-tolotra-nomenjanahary-en.pdf';
+    const downloadFileName = language === 'fr'
+      ? 'CV_Tolotra_Nomenjanahary_FR.pdf'
+      : 'CV_Tolotra_Nomenjanahary_EN.pdf';
+    
+    const cvUrl = `/${cvFileName}`;
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = downloadFileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-midnight via-midnight-light to-midnight relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -25,9 +43,18 @@ const Hero = () => {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-brown rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-32 relative z-10">
+      <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 animate-fadeIn">
+            <div className="mb-8 flex justify-center">
+              <div className="relative profile-photo-container">
+                <img
+                  src={profilePhoto}
+                  alt="Tolotra Nomenjanahary"
+                  className="profile-photo-oval"
+                />
+              </div>
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-beige mb-4">
               RANDRIANANTENAINA
             </h1>
@@ -58,7 +85,10 @@ const Hero = () => {
               {t('hero.viewProjects')}
             </button>
 
-            <button className="px-8 py-3 bg-brown hover:bg-brown-light text-beige rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brown/50 flex items-center space-x-2">
+            <button
+              onClick={handleDownloadCV}
+              className="px-8 py-3 bg-brown hover:bg-brown-light text-beige rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brown/50 flex items-center space-x-2"
+            >
               <Download size={20} />
               <span>{t('hero.downloadCV')}</span>
             </button>

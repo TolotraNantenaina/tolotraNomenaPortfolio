@@ -6,7 +6,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: t('skills.languages'),
-      skills: ['JavaScript', 'TypeScript', 'C#', 'C', 'SQL'],
+      skills: ['JavaScript', 'TypeScript', 'C#', 'C', 'SQL', 'Python'],
       color: 'garnet',
     },
     {

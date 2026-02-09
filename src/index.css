@@ -30,4 +30,104 @@
       transform: translateY(0);
     }
   }
+
+  .animate-bounce-dot {
+    animation: bounceDot 1.2s ease-in-out infinite;
+  }
+
+  @keyframes bounceDot {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-24px) scale(1.15);
+      opacity: 1;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .profile-photo-container {
+    width: 280px;
+    height: 320px;
+    position: relative;
+  }
+
+  .profile-photo-oval {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    clip-path: ellipse(50% 50% at 50% 50%);
+    mask-image: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      black 30%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      black 30%,
+      transparent 100%
+    );
+    filter: contrast(1.1) brightness(1.05);
+    position: relative;
+  }
+
+  .profile-photo-oval::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(
+      135deg,
+      rgba(245, 230, 211, 0.8) 0%,
+      rgba(245, 230, 211, 0.4) 30%,
+      rgba(245, 230, 211, 0.1) 60%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .profile-photo-oval::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      transparent 0%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.1) 70%,
+      rgba(0, 0, 0, 0.3) 90%,
+      transparent 100%
+    );
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  @media (max-width: 768px) {
+    .profile-photo-container {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translate(-50%, 100%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+  }
 }

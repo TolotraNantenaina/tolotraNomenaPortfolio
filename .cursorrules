@@ -1,0 +1,162 @@
+You are an expert Fullstack Developer and UI/UX Designer.
+
+Project Goal:
+Build a modern, clean, bilingual (FR/EN) personal portfolio website for a Fullstack Developer named:
+TOLOTRA NOMENJANAHARY RANDRIANANTENAINA.
+
+Design System:
+- Primary color: Midnight Blue
+- Secondary color: Beige
+- Accent colors: Brown and Garnet (Deep Red)
+- Style: Modern, minimalist, elegant, tech-oriented
+- Rounded cards, soft shadows, smooth animations
+- Use modern typography and good contrast
+
+Core Requirements:
+- Bilingual website with language switcher (FR / EN)
+- All text content must exist in both French and English
+- Fully responsive (mobile, tablet, desktop)
+- SEO friendly
+- Fast loading
+- Accessible
+
+Tech Stack:
+- React 18.3.1
+- TypeScript 5.5.3
+- Vite 5.4.2
+- Tailwind CSS 3.4.1
+- Lucide React (icons)
+- Component-based architecture
+
+Project Structure:
+- src/
+  - components/
+    - Header.tsx
+    - Hero.tsx
+    - About.tsx
+    - Skills.tsx
+    - Experience.tsx
+    - Projects.tsx
+    - Education.tsx
+    - Certifications.tsx
+    - Contact.tsx
+  - contexts/
+    - LanguageContext.tsx (contains all translations)
+  - App.tsx
+  - main.tsx
+  - index.css
+
+Internationalization:
+- All translations are stored in LanguageContext.tsx
+- Use useLanguage() hook with t() function to access translations
+- Translation keys follow dot notation: 'section.subsection.key'
+- No hardcoded strings in components
+- Language state managed via React Context API
+
+Content Structure (from LanguageContext.tsx):
+
+Navigation:
+- About (À propos)
+- Skills (Compétences)
+- Experience (Expérience)
+- Projects (Projets)
+- Education (Formation)
+- Certifications (Certifications)
+- Contact (Contact)
+
+Hero Section:
+- Full name: RANDRIANANTENAINA Tolotra Nomenjanahary
+- Title: Fullstack Developer (Développeur Fullstack)
+- Subtitle: Software Engineer (Ingénieur Logiciel)
+- Description: Passionate about building scalable, performant, and user-friendly applications using modern technologies
+- CTA buttons: View Projects, Download CV, Contact Me
+
+About Section:
+- Title: About Me (À Propos de Moi)
+- Description: Passionate Fullstack Developer with strong experience in web and mobile application development. Focused on building scalable, performant, and user-friendly systems that solve real-world problems.
+
+Skills:
+Programming Languages:
+- JavaScript, TypeScript, C#, C, SQL
+
+Frontend:
+- React, React Native, Expo, Vue.js, Blazor
+
+Backend:
+- Node.js, NestJS, .NET, CodeIgniter 3
+
+Databases:
+- PostgreSQL, MySQL 5.7, SQLite, Redis, RxDB
+
+Tools & DevOps:
+- Git, Docker, Nginx, Apache2, Linux Server
+
+Experience:
+Fullstack Developer – Freelance
+- Development of AI training systems for Malagasy language (IA_NAH project)
+- Financial management application development (FinApp) with web and mobile support
+- Real-time chat application development (Nearu) for local networks
+- Multi-platform application development (Android, iOS, Desktop)
+- Project creation and development with Angular 2+
+
+Projects:
+1. IA_NAH
+   - Python project for training AI in Malagasy language. Dedicated to collecting, cleaning, and training language models on Malagasy texts.
+
+2. tolotraNomenaPortfolio
+   - Modern bilingual portfolio website built with React, TypeScript, and Tailwind CSS.
+
+3. Nearu
+   - Modern, real-time chat application that works over local networks without requiring internet connectivity. Built with React Native and Expo.
+
+4. NearuToo
+   - Version 2 of Nearu, improved real-time chat application for local networks.
+
+5. JobMatch
+   - Mobile application developed with React Native (Expo), inspired by LinkedIn and Tinder, reinventing job search through a warm, fluid, and human experience. Highlights user skills and certifications, allowing candidates and employers to meet through an intelligent matching system.
+
+6. FinApp
+   - Modern financial management application with both web and mobile support. Version 2 of myFinApp.
+
+Education:
+- Computer Science / Software Engineering
+- Strong academic foundation in computer science with focus on software engineering principles, algorithms, and system design
+
+Certifications:
+- CodinGame - Python 3 (November 2025)
+- CodinGame - JavaScript (October 2025)
+- CodinGame - PHP (October 2025)
+
+Contact:
+- Email field
+- Contact form with name, email, and message fields
+- Social links: LinkedIn, GitHub
+
+Coding Standards:
+- Clean, readable code
+- Reusable components
+- Use Tailwind utility classes
+- Prefer functional components
+- Use hooks (useState, useContext, custom hooks)
+- TypeScript for type safety
+- No comments in code (as per user rules)
+
+UI Behavior:
+- Smooth scroll navigation
+- Hover animations
+- Section reveal on scroll
+- Transform animations on hover
+- Gradient backgrounds
+- Responsive grid layouts
+
+SEO:
+- Meta title and description
+- OpenGraph tags
+- Semantic HTML
+- Proper heading hierarchy
+
+Output Expectations:
+- Cursor should always generate production-ready code
+- Avoid placeholders when possible
+- Follow this document as the single source of truth
+- All text must use translation keys from LanguageContext.tsx

@@ -6,28 +6,52 @@ const Projects = () => {
 
   const projects = [
     {
-      title: t('projects.pos.title'),
-      description: t('projects.pos.description'),
-      tags: ['POS', 'Stock Management', 'Invoicing'],
+      title: t('projects.ianah.title'),
+      description: t('projects.ianah.description'),
+      link: null,
+      tags: ['Python', 'AI', 'NLP', 'Malagasy'],
       color: 'garnet',
+      github: 'https://github.com/TolotraNantenaina/IA_NAH',
     },
     {
-      title: t('projects.realestate.title'),
-      description: t('projects.realestate.description'),
-      tags: ['React', 'Mobile', '3D Visualization'],
+      title: t('projects.portfolio.title'),
+      description: t('projects.portfolio.description'),
+      link: null,
+      tags: ['React', 'TypeScript', 'Tailwind CSS'],
       color: 'brown',
+      github: 'https://github.com/TolotraNantenaina/tolotraNomenaPortfolio',
     },
     {
-      title: t('projects.sms.title'),
-      description: t('projects.sms.description'),
-      tags: ['C', 'Redis', 'High Performance'],
+      title: t('projects.nearu.title'),
+      description: t('projects.nearu.description'),
+      link: "https://expo.dev/accounts/mcarty10/projects/nearu/builds/429efd55-9dce-48ff-9226-c02b4f3298fd",
+      tags: ['React Native', 'Expo', 'Real-time', 'Local Network'],
       color: 'midnight',
+      github: 'https://github.com/TolotraNantenaina/Nearu',
     },
     {
-      title: t('projects.inventory.title'),
-      description: t('projects.inventory.description'),
-      tags: ['React Native', 'Expo', 'Real-time'],
+      title: t('projects.nearutoo.title'),
+      description: t('projects.nearutoo.description'),
+      link: null,
+      tags: ['React Native', 'Expo', 'Real-time', 'Local Network'],
       color: 'garnet',
+      github: 'https://github.com/TolotraNantenaina/NearuToo',
+    },
+    {
+      title: t('projects.jobmatch.title'),
+      description: t('projects.jobmatch.description'),
+      link: "https://jobmatch--stable.expo.app/",
+      tags: ['React Native', 'Expo', 'Job Search', 'Matching'],
+      color: 'brown',
+      github: 'https://github.com/TolotraNantenaina/JobMatch',
+    },
+    {
+      title: t('projects.finapp.title'),
+      description: t('projects.finapp.description'),
+      link: "https://finapp-101--59d9t4etbs.expo.app/",
+      tags: ['React Native', 'Expo', 'Finance', 'Web & Mobile'],
+      color: 'midnight',
+      github: 'https://github.com/TolotraNantenaina/FinApp',
     },
   ];
 
@@ -51,7 +75,7 @@ const Projects = () => {
           {t('projects.title')}
         </h2>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <div
               key={idx}
@@ -64,14 +88,32 @@ const Projects = () => {
                   <div className="w-12 h-12 bg-beige rounded-lg flex items-center justify-center">
                     <Folder className="text-midnight" size={24} />
                   </div>
-                  <button className="text-midnight/60 hover:text-midnight transition-colors">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-midnight/60 hover:text-midnight transition-colors"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
                     <ExternalLink size={20} />
-                  </button>
+                  </a>
                 </div>
 
-                <h3 className="text-2xl font-bold text-midnight mb-3 group-hover:text-garnet transition-colors">
-                  {project.title}
-                </h3>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl font-bold text-midnight mb-3 group-hover:text-garnet transition-colors block cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-garnet"
+                    aria-label={`View ${project.title} on website`}
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  <h3 className="text-2xl font-bold text-midnight mb-3 group-hover:text-garnet transition-colors">
+                    {project.title}
+                  </h3>
+                )}
 
                 <p className="text-midnight/70 leading-relaxed mb-6">
                   {project.description}
