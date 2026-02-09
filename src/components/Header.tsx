@@ -50,7 +50,7 @@ const Header = () => {
             TN<span className="text-garnet">.</span>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.key}
@@ -72,14 +72,14 @@ const Header = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-beige"
+            className="lg:hidden text-beige"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 animate-fadeIn">
+          <div className="lg:hidden mt-4 pb-4 space-y-4 animate-fadeIn">
             {navItems.map((item) => (
               <button
                 key={item.key}

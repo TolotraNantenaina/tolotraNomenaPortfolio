@@ -130,4 +130,24 @@
       opacity: 1;
     }
   }
+
+  .scrollable-name {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    word-break: break-word;
+    line-height: 1.2;
+  }
+
+  .scrollable-name::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .scrollable-name {
+      max-height: 120px;
+    }
+  }
 }

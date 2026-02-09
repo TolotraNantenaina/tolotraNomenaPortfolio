@@ -55,7 +55,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-beige mb-4">
+            <h1 className="text-5xl md:text-7xl font-bold text-beige mb-4 scrollable-name">
               RANDRIANANTENAINA
             </h1>
             <h2 className="text-3xl md:text-5xl font-bold text-beige mb-2">
