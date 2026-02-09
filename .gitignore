@@ -24,4 +24,4 @@ dist-ssr
 
 .bolt
 
-public/cv-*.pdf
+#public/cv-*.pdf
