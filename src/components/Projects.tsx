@@ -16,7 +16,7 @@ const Projects = () => {
     {
       title: t('projects.portfolio.title'),
       description: t('projects.portfolio.description'),
-      link: null,
+      link: 'https://tolotra-nomenjanahary.netlify.app/',
       tags: ['React', 'TypeScript', 'Tailwind CSS'],
       color: 'brown',
       github: 'https://github.com/TolotraNantenaina/tolotraNomenaPortfolio',
