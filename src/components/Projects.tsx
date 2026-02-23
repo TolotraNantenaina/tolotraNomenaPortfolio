@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: t('projects.nearu.title'),
       description: t('projects.nearu.description'),
-      link: "https://expo.dev/accounts/mcarty10/projects/nearu/builds/429efd55-9dce-48ff-9226-c02b4f3298fd",
+      link: "https://nearu-overview.netlify.app/",
       tags: ['React Native', 'Expo', 'Real-time', 'Local Network'],
       color: 'midnight',
       github: 'https://github.com/TolotraNantenaina/Nearu',
